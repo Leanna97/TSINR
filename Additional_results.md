@@ -11,7 +11,7 @@ TSINR, in both multivariate and univariate scenarios, effectively
 captures temporal continuity and precisely identifies discontinuous
 anomalies. The findings affirm the robustness of TSINR across
 diverse datasets and showcase its potential for broader applications
-in diverse domains
+in diverse domains.
 
 <p align="center">
 <img src=./plot/experiments_major.png width="1000" height="500"/>

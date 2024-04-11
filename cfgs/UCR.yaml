@@ -1,0 +1,56 @@
+trainer: timeseries_trainer
+
+eval_epoch: 1
+anomaly_ratio: 0.1
+
+ucr_train_dataset:
+  name: ucr_timeseries
+  args:
+    split: train
+    args:
+      root_path: ./all_datasets/UCR_TimeSeriesAnomalyDatasets2021/FilesAreInHere/
+      data: defined_later
+      win_size: 100
+      step: 1
+  loader:
+    batch_size: 128
+    num_workers: 0
+
+ucr_test_dataset:
+  name: ucr_timeseries
+  args:
+    split: test
+    args:
+      root_path: ./all_datasets/UCR_TimeSeriesAnomalyDatasets2021/FilesAreInHere/
+      data: defined_later
+      win_size: 100
+      step: 1
+  loader:
+    batch_size: 128
+    num_workers: 0
+
+model:
+  name: TSINR
+  args:
+    use_llm: False
+    llm_out: 768
+    seg_num: 25
+    gpt_para: 1
+    gpt_layer: 6
+    mlp: 0
+    tokenizer:
+      name: timeseries_tokenizer
+      args: {input_size: 100, patch_size: 1, padding: 0, img_channels: 1}
+    hyponet:
+      name: TSINR_hypo
+      args: {group: 1, global_depth: 1, group_depth: 4, in_dim: 1, out_dim: 1, global_hidden_dim: 64, group_hidden_dim: 32, use_pe: true, pe_dim: 64, out_bias: 0, pe_sigma: 1024, fourier_coef: 50} # lenght//2
+    n_groups: 64
+    transformer_encoder:
+      name: transformer_encoder
+      args: {dim: 256, depth: 6, n_head: 12, head_dim: 64, ff_dim: 1024}
+
+optimizer:
+  name: adam
+  args: {lr: 1.e-4}
+max_epoch: 10
+

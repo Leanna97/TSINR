@@ -1,0 +1,60 @@
+trainer: timeseries_trainer
+
+eval_epoch: 1
+anomaly_ratio: 1
+
+all_train_dataset:
+  name: all_timeseries
+  args:
+    split: train
+    args:
+      task_name: anomaly_detection
+      root_path: ./all_datasets/PSM
+      data: PSM
+      embed: timeF
+      percent: 5
+      freq: h
+      seq_len: 100
+      num_workers: 2
+      batch_size: 64
+
+all_test_dataset:
+  name: all_timeseries
+  args:
+    split: test
+    args:
+      task_name: anomaly_detection
+      root_path: ./all_datasets/PSM
+      data: PSM
+      embed: timeF
+      percent: 5
+      freq: h
+      seq_len: 100
+      num_workers: 2
+      batch_size: 64
+
+model:
+  name: TSINR
+  args:
+    use_llm: True
+    llm_out: 768
+    seg_num: 25
+    gpt_para: 1
+    gpt_layer: 6
+    mlp: 0
+    tokenizer:
+      name: timeseries_tokenizer
+      args: {input_size: 100, patch_size: 1, padding: 0, img_channels: 25}
+    hyponet:
+      name: TSINR_hypo
+      args: {group: 3, global_depth: 3, group_depth: 2, in_dim: 1, out_dim: 25, global_hidden_dim: 64, group_hidden_dim: 32, use_pe: true, pe_dim: 64, out_bias: 0, pe_sigma: 1024, fourier_coef: 50} # lenght//2
+    n_groups: 64
+    transformer_encoder:
+      name: transformer_encoder
+      args: {dim: 256, depth: 6, n_head: 12, head_dim: 64, ff_dim: 1024}
+
+optimizer:
+  name: adam
+  args: {lr: 1.e-4}
+max_epoch: 100
+

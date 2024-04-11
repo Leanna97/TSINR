@@ -52,3 +52,6 @@ The following table shows that **integrating with the both part leads to best re
 <p align="center">
 <img src=./plot/ablation_study.png width="1000" height="180"/>
 </p>
+
+
+### Efficiency Analysis

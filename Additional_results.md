@@ -32,8 +32,8 @@ and the change point detection and time series segmentation methods (BOCPD, U-Ti
 </p>
 
 
-### Additional Visualization for typical anomalies.
-We use the synthetic data from DCdetector, which has univariate time series with different types of anomalies, 
+### Additional Visualization for typical types of anomalies.
+We follow DCdetector and validate the robustness of TSINR with the synthetic data which has univariate time series with different types of anomalies, 
 including the point-wise anomaly (global point and contextual point anomalies) 
 and patternwise anomalies (shapelet, seasonal, and trend anomalies). 
 It can be seen that TSINR can robustly detect various anomalies from normal points with relatively high anomaly scores.

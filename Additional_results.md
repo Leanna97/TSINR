@@ -35,7 +35,7 @@ and the change point detection and time series segmentation methods (BOCPD, U-Ti
 We use the synthetic data from DCdetector, which has univariate time series with different types of anomalies, 
 including the point-wise anomaly (global point and contextual point anomalies) 
 and patternwise anomalies (shapelet, seasonal, and trend anomalies). 
-It can be seen that TSINR can robustly detect various anomalies better from normal points with relatively higher anomaly scores.
+It can be seen that TSINR can robustly detect various anomalies from normal points with relatively high anomaly scores.
 
 <p align="center">
 <img src=./plot/anomalies_plot.png width="1000" height="350"/>

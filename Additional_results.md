@@ -14,7 +14,7 @@ diverse datasets and showcase its potential for broader applications
 in diverse domains
 
 <p align="center">
-<img src=./plot/experiments_major.png width="700" height="250"/>
+<img src=./plot/experiments_major.png width="1000" height="500"/>
 </p>
 
 
@@ -27,7 +27,7 @@ the density-estimation models (LOF, MPPCACD, DAGMM), the classic methods (OCSVM,
 and the change point detection and time series segmentation methods (BOCPD, U-Time, TS-CP2).
 
 <p align="center">
-<img src=./plot/experiments_classical.png width="700" height="200"/>
+<img src=./plot/experiments_classical.png width="1000" height="300"/>
 </p>
 
 
@@ -38,7 +38,7 @@ and patternwise anomalies (shapelet, seasonal, and trend anomalies).
 It can be seen that TSINR can robustly detect various anomalies better from normal points with relatively higher anomaly scores.
 
 <p align="center">
-<img src=./plot/anomalies_plot.png width="700" height="200"/>
+<img src=./plot/anomalies_plot.png width="1000" height="350"/>
 </p>
 
 
@@ -50,5 +50,5 @@ in the residual part.
 The following table shows that **integrating with the both part leads to best results.** 
 
 <p align="center">
-<img src=./plot/ablation_study.png width="700" height="100"/>
+<img src=./plot/ablation_study.png width="1000" height="180"/>
 </p>

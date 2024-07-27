@@ -1,7 +1,7 @@
 # TSINR: Capturing Temporal Continuity via Implicit Neural Representations for Time Series Anomaly Detection
 
 <p align="center">
-<img src=./plot/motivation.png width="1100" height="300"/>
+<img src=/plot/motivation.png width="1100" height="300"/>
 </p>
 
 ## Abstract

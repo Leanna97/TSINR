@@ -1,7 +1,7 @@
 # TSINR: Capturing Temporal Continuity via Implicit Neural Representations for Time Series Anomaly Detection
 
 <p align="center">
-<img src=/plot/motivation.png width="1100" height="300"/>
+<img src=plot/motivation.png width="1100" height="300"/>
 </p>
 
 ## Abstract
@@ -36,7 +36,7 @@ reconstruction-based methods
 
 ## Reconstruction from INR
 <p align="center">
-<img src=./plot/architecture.png width="1100" height="500"/>
+<img src=plot/architecture.png width="1100" height="500"/>
 </p>
 
 
@@ -71,7 +71,7 @@ CUDA_VISIBLE_DEVICES=0 python run_trainer_ucr.py --cfg ./cfgs/UCR.yaml
 
 ## Major Results
 <p align="center">
-<img src=./plot/experiments_major.png width="1100" height="600"/>
+<img src=plot/experiments_major.png width="1100" height="600"/>
 </p>
 
 
